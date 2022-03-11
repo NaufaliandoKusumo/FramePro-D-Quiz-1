@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @Styles.Render("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css")
+    @Styles.Render("~/Content/style.css")
+    @RenderSection("scripts", required: false)
+    <title>Kuva Jaya</title>
+</head>
+<body>
+    <header>
+        <div class="main-nav">
+            @Html.ActionLink("Kuva Jaya", "index", "Home", null, new { @class = "logo" })
+
+            <ul>
+                <li>@Html.ActionLink("Profile", "Profile", "Home")</li>
+                <li>@Html.ActionLink("Company", "Company", "Home")</li>
+                <li>@Html.ActionLink("Services", "Services", "Home")</li>
+                <li>@Html.ActionLink("Collaboration", "Collaboration", "Home")</li>
+            </ul>
+        </div>
+
+    </header>
+
+    <div class="container">
+        @RenderBody()
+    </div>
+    
+</body>
+</html>

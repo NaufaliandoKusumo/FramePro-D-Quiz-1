@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @Styles.Render("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css")
+    @Styles.Render("~/Content/style.css")
+    @RenderSection("scripts", required: false)
+    <title>Kuva Jaya</title>
+</head>
+<body>
+    <header>
+        <div class="main-nav">
+            @Html.ActionLink("Kuva Jaya", "_Layout", "Shared", null, new { @class = "logo" })
+
+            <ul>
+                <li>@Html.ActionLink("Profile", "profile", "profil", null, null)</li>
+                <li>@Html.ActionLink("Company", "company", "company", null, null)</li>
+                <li>@Html.ActionLink("Services", "services", "services", null, null)</li>
+                <li>@Html.ActionLink("Collaboration", "collaboration", "collabotation", null, null)</li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="description">
+            <h2 class="heading-secondary">
+                Our Company
+            </h2>
+            <p>
+                Our company is called PT Kuva Jaya Tbk., located on Jalan Keputih No.33 Sukolilo,
+                Surabaya, East Java. The company was founded in 2022 and since then started many property bussiness.
+                We only collaborate with international certified brands to keep our costumers satisfied with our services.
+
+            </p>
+        </div>
+    </div>
+    @RenderBody()
+</body>
+</html>
